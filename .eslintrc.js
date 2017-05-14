@@ -6,6 +6,7 @@ module.exports = {
     "plugins": [
         "react",
         "import",
-        "prettier"
+        "prettier",
+        "jsx-a11y"
     ]
 };
