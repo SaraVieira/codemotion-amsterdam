@@ -1,7 +1,5 @@
-/* eslint-disable global-require */
+const cssnext = require('postcss-cssnext')();
 
 module.exports = () => ({
-  plugins: [
-    require('postcss-cssnext')(),
-  ],
+  plugins: [cssnext],
 });
