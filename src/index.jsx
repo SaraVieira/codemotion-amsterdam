@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // eslint-disable-line
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Home from './components/home';
@@ -21,5 +21,4 @@ ReactDOM.render(
     </div>
   </BrowserRouter>
 , document.getElementById('app'));
-
 if (module.hot) module.hot.accept();

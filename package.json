@@ -47,8 +47,20 @@
     "lint:css": "stylelint src/**/*.css",
     "lint:css:fix": "stylefmt --recursive 'src/**/*.css'",
     "lint:js": "eslint src/",
-    "lint:js:fix": "eslint src/ --fix"
-  },
+    "lint:js:fix": "eslint src/ --fix",
+    "precommit": "lint-staged"
+   },
+   "lint-staged": {
+     "*.{js,jsx}": [
+       "eslint --fix",
+       "git add"
+     ],
+     "*.css": [
+       "stylefmt",
+       "stylelint",
+       "git add"
+     ]
+   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SaraVieira/codemotion-amsterdam.git"
