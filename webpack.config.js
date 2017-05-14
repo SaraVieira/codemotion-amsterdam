@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path'); //eslint-disable-line
 const BabiliPlugin = require('babili-webpack-plugin');
 const NyanProgressPlugin = require('nyan-progress-webpack-plugin');
 
@@ -8,13 +8,16 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.css'],
+  },
   module: {
     rules: [
       {
         test: /\.(jpg|png|svg)$/,
         loader: 'url-loader',
         options: {
-          limit: 25000,
+          limit: 10000,
         },
       },
       {
@@ -44,9 +47,6 @@ module.exports = {
     port: 3000,
     hot: true,
     historyApiFallback: true,
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new BabiliPlugin(),
